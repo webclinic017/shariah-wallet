@@ -18,7 +18,7 @@
    <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
    <!-- Theme style -->
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../../dist/css/adminlte.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -878,23 +878,70 @@
               <div class="row">
                   <div class="col-md-4">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Limit Name
+                      <i class="fas fa-tachometer-alt mr-1"></i><label class="font-weight-normal" >Limit Name
                         </label>
                         <input type="text" class="form-control form-control-sm">
                       </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <i class="fas fa-sort-amount-down-alt mr-1"></i><label >Per Txn Min Amount</label>
+                      <i class="fas fa-money-bill-alt mr-1"></i><label class="font-weight-normal" >Per Txn Min Amount</label>
                         <input type="text" class="form-control form-control-sm">
                       </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <i class="fas fa-sort-amount-up-alt mr-1"></i><label >Per Txn Max Amount</label>
+                      <i class="fas fa-money-bill-alt mr-1"></i><label class="font-weight-normal" >Per Txn Max Amount</label>
                         <input type="text" class="form-control form-control-sm">
                       </div>
                   </div>
+                  
+                  <!-- 1st row -->
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <i class="fas fa-th-list mr-1"></i><label class="font-weight-normal" >Daily Max Txn No
+                        </label> 
+                        <input type="text" class="form-control form-control-sm">
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <i class="fas fa-money-bill-alt mr-1"></i><label class="font-weight-normal" >Daily Max Txn Amount</label>
+                        <input type="text" class="form-control form-control-sm">
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <i class="fas fa-th-list mr-1"></i><label class="font-weight-normal" >Weekly Max Txn No</label>
+                        <input type="text" class="form-control form-control-sm">
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <i class="fas fa-money-bill-alt mr-1"></i><label class="font-weight-normal" >Weekly Max Txn Amount</label>
+                        <input type="text" class="form-control form-control-sm">
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <i class="fas fa-th-list mr-1"></i><label class="font-weight-normal" >Monthly Max Txn No</label>
+                        <input type="text" class="form-control form-control-sm">
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <i class="fas fa-money-bill-alt mr-1"></i><label class="font-weight-normal"  >Monthly Max Txn Amount</label>
+                        <input type="text" class="form-control form-control-sm">
+                      </div>
+                  </div>
+                  
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <i class="fas fa-comment-alt mr-1"></i><label class="font-weight-normal" >Note</label>
+                         <textarea class="form-control form-control-sm" id="" cols="30" rows="2"></textarea>
+                      </div>
+                  </div>
+                  
               </div>
               
             </div>
@@ -916,40 +963,99 @@
                 </div> -->
                 <!-- /.card-header -->
                 <div class="card-body">
-                  <table id="example1" class="table table-hover table-sm table-bordered table-striped">
+                  <table id="example1" style="font-size: 85%;" class="text-center table table-hover table-sm table-bordered table-striped">
                     <thead>
-                    <tr>
-                        <th>Profile name</th>
-                        <th>Description</th>
+                    <tr style="font-size: 85%;">
+                        <th>Limit Name</th>
+                        <th>Per Tx Max</th>
+                        <th>Per Tx Min</th>
+                        <th>Daily Max</th>
+                        <th>Daily Max Txn No</th>
+                        <th>Weekly Max</th>
+                        <th>Weekly Max Tx No</th>
+                        <th>Monthly Max</th>
+                        <th>Monthly Max Tx No</th>
                         <th class="text-center">Action</th>
                     
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                      <td>Default Customer Transaction profile for Bank</td>
-                      <td>Default Customer Transaction profile for Bank</td>
+                      <td>Branch Agent</td>
+                      <td>100000</td>
+                      <td>50</td>
+                      <td>1000000</td>
+                      <td>00</td>
+                      <td>5000000</td>
+                      <td>2000</td>
+                      <td>5000000</td>
+                      <td>5000</td>
                       <td class="text-center">
-                        <button type="button" class="btn btn-sm btn-success">Edit</button>
-                        <button type="button" class="btn btn-sm btn-danger">Delete</button>
+                        <button type="button" class="btn btn-xs btn-success p-1">Edit</button>
+                        <button type="button" class="btn btn-xs btn-danger p-1">Delete</button>
                       </td>
                     </tr>
                     <tr>
-                        <td>Default Customer Transaction profile for Bank</td>
-                        <td>Default Customer Transaction profile for Bank</td>
-                        <td class="text-center">
-                          <button type="button" class="btn btn-sm btn-success">Edit</button>
-                          <button type="button" class="btn btn-sm btn-danger">Delete</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Default Customer Transaction profile for Bank</td>
-                        <td>Default Customer Transaction profile for Bank</td>
-                        <td class="text-center">
-                          <button type="button" class="btn btn-sm btn-success">Edit</button>
-                          <button type="button" class="btn btn-sm btn-danger">Delete</button>
-                        </td>
-                      </tr>
+                      <td>Branch Agent</td>
+                      <td>100000</td>
+                      <td>50</td>
+                      <td>1000000</td>
+                      <td>00</td>
+                      <td>5000000</td>
+                      <td>2000</td>
+                      <td>5000000</td>
+                      <td>5000</td>
+                      <td class="text-center">
+                        <button type="button" class="btn btn-xs btn-success p-1">Edit</button>
+                        <button type="button" class="btn btn-xs btn-danger p-1">Delete</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Branch Agent</td>
+                      <td>100000</td>
+                      <td>50</td>
+                      <td>1000000</td>
+                      <td>00</td>
+                      <td>5000000</td>
+                      <td>2000</td>
+                      <td>5000000</td>
+                      <td>5000</td>
+                      <td class="text-center">
+                        <button type="button" class="btn btn-xs btn-success p-1">Edit</button>
+                        <button type="button" class="btn btn-xs btn-danger p-1">Delete</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Branch Agent</td>
+                      <td>100000</td>
+                      <td>50</td>
+                      <td>1000000</td>
+                      <td>00</td>
+                      <td>5000000</td>
+                      <td>2000</td>
+                      <td>5000000</td>
+                      <td>5000</td>
+                      <td class="text-center">
+                        <button type="button" class="btn btn-xs btn-success p-1">Edit</button>
+                        <button type="button" class="btn btn-xs btn-danger p-1">Delete</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Branch Agent</td>
+                      <td>100000</td>
+                      <td>50</td>
+                      <td>1000000</td>
+                      <td>00</td>
+                      <td>5000000</td>
+                      <td>2000</td>
+                      <td>5000000</td>
+                      <td>5000</td>
+                      <td class="text-center">
+                        <button type="button" class="btn btn-xs btn-success p-1">Edit</button>
+                        <button type="button" class="btn btn-xs btn-danger p-1">Delete</button>
+                      </td>
+                    </tr>
+                    
                    
                     </tfoot>
                   </table>

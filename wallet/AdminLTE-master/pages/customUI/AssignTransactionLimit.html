@@ -19,6 +19,7 @@
    <!-- Theme style -->
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/adminlte.css">
+  <link rel="stylesheet" href="../../dist/css/style.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -869,7 +870,27 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="form-group">
-                  <label>Select Transaction Profile</label>
+                  <label>Select Limit</label>
+                  <select class="form-control form-control-sm select2" style="width: 100%;">
+                    <option selected="selected">Cash In</option>
+                    <option>Bill Pay</option>
+                    <option>Cashout</option>
+                    <option>Fund Movement</option>
+                    <option>Bill Pay</option>
+                    <option>Cashout</option>
+                    <option>Fund Movement</option>
+                    <option>Bill Pay</option>
+                    <option>Cashout</option>
+                    <option>Fund Movement</option>
+                  </select>
+                </div>
+                <!-- /.form-group -->
+               
+              </div>
+              <!-- /.col -->
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>Select Profile</label>
                   <select class="form-control form-control-sm select2" style="width: 100%;">
                     <option selected="selected">Default Customer Transaction profile for Bank</option>
                     <option>Default Customer Transaction profile for Bank</option>
@@ -888,9 +909,11 @@
                
               </div>
               <!-- /.col -->
+             
+              
               <div class="col-md-4">
                 <div class="form-group">
-                  <label>Sales Service Type</label>
+                  <label>Sales Service</label>
                   <select class="form-control form-control-sm select2" style="width: 100%;">
                     <option selected="selected">IC Billpay</option>
                     <option>IC Mercant Payment</option>
@@ -903,26 +926,6 @@
                 </div>
                 <!-- /.form-group -->
                 
-              </div>
-              <!-- /.col -->
-              <div class="col-md-4">
-                <div class="form-group">
-                  <label>Select Limit</label>
-                  <select class="form-control form-control-sm select2" style="width: 100%;">
-                    <option selected="selected">Cash In</option>
-                    <option>Bill Pay</option>
-                    <option>Cashout</option>
-                    <option>Fund Movement</option>
-                    <option>Bill Pay</option>
-                    <option>Cashout</option>
-                    <option>Fund Movement</option>
-                    <option>Bill Pay</option>
-                    <option>Cashout</option>
-                    <option>Fund Movement</option>
-                  </select>
-                </div>
-                <!-- /.form-group -->
-               
               </div>
               <!-- /.col -->
              
@@ -949,37 +952,24 @@
                   <table id="example1" class="table table-hover table-sm table-bordered table-striped">
                     <thead>
                     <tr>
+                        <th class="w-25">Service name</th>
+                        <th>Limit name</th>
                         <th>Profile name</th>
-                        <th>Description</th>
                         <th class="text-center">Action</th>
                     
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                      <td>Default Customer Transaction profile for Bank</td>
-                      <td>Default Customer Transaction profile for Bank</td>
+                      <td>Cash In</td>
+                      <td>Super Distributor</td>
+                      <td>Default Transaction profile for Independent Agent</td>
                       <td class="text-center">
                         <button type="button" class="btn btn-sm btn-success">Edit</button>
                         <button type="button" class="btn btn-sm btn-danger">Delete</button>
                       </td>
                     </tr>
-                    <tr>
-                        <td>Default Customer Transaction profile for Bank</td>
-                        <td>Default Customer Transaction profile for Bank</td>
-                        <td class="text-center">
-                          <button type="button" class="btn btn-sm btn-success">Edit</button>
-                          <button type="button" class="btn btn-sm btn-danger">Delete</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Default Customer Transaction profile for Bank</td>
-                        <td>Default Customer Transaction profile for Bank</td>
-                        <td class="text-center">
-                          <button type="button" class="btn btn-sm btn-success">Edit</button>
-                          <button type="button" class="btn btn-sm btn-danger">Delete</button>
-                        </td>
-                      </tr>
+                    
                    
                     </tfoot>
                   </table>

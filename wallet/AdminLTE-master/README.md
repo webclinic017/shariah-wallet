@@ -35,7 +35,7 @@ _**Important Note**: You needed to add separately cdn links for plugins in your 
 <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
 ```
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.css">
 ```
 ### Using The Command Line:
 _**Important Note**: To install it via npm/Yarn, you need at least Node.js 10 or higher._
@@ -63,7 +63,7 @@ _**Important Note**: You needed to add separately cdn links for plugins in your 
 <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1.0/dist/js/adminlte.min.js"></script>
 ```
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1.0/dist/css/adminlte.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1.0/dist/css/adminlte.css">
 ```
 ### Using The Command Line:
 _**Important Note**: To install it via npm/Yarn, you need at least Node.js 10 or higher._

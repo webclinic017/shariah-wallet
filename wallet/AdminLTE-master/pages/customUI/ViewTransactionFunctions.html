@@ -14,7 +14,8 @@
   <!-- Toastr -->
   <link rel="stylesheet" href="../../plugins/toastr/toastr.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../../dist/css/adminlte.css">
+  <link rel="stylesheet" href="../../dist/css/style.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -220,6 +221,71 @@
                 <a href="../../index3.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v3</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-dollar-sign"></i>
+              <p>
+                Transaction Profile
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/customUI/CreateTransactionProfile.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Create Profile</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/customUI/AssignTransactionLimit.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Assign transaction Limit to Profile</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/customUI/AssignTransactionProfile.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Assign transaction Profile to Client</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/customUI/CreateLimit.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Create Transaction Limit</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/customUI/ViewTransactionFunctions.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Transaction Functions</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>General Elements</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/advanced.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Advanced Elements</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/editors.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Editors</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Validation</p>
                 </a>
               </li>
             </ul>
@@ -892,23 +958,137 @@
               <div class="card-body">
                 <div class="tab-content" id="custom-tabs-four-tabContent">
                   <div class="tab-pane fade show active" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
+
+
+                    Pending
                     <table id="example1" style="font-size: 85%;" class="text-center table table-hover table-sm table-bordered table-striped">
                       <thead>
                       <tr style="font-size: 85%;">
-                          <th>Limit Name</th>
-                          <th>Limit ID</th>
-                          <th>Per Tx Min</th>
-                          <th>Per Tx Max</th>
-                          <th>Daily Max</th>
-                          <th>Weekly Max</th>
-                          <th>Monthly Max</th>
-                          <th>Daily Max Tx No</th>
-                          <th>Weekly Max Tx No</th>
-                          <th>Monthly Max Tx No</th>
-                          <th>Opetayion Type</th>
-                          <th>Maker Name</th>
-                          <th>Maker Note</th>
-                          <th class="text-center">Action</th>
+                          <th>
+                            <div class="form-group mb-0">
+                              <div class="custom-control custom-checkbox">
+                                <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                <label for="customCheckbox1" class="custom-control-label"></label>
+                              </div>
+                              
+                            </div>
+                          </th>
+                          <th>Limit <br> Name</th>
+                          <th>Limit <br> ID</th>
+                          <th>Per <br> Tx Min</th>
+                          <th>Per <br> Tx Max</th>
+                          <th>Daily <br> Max</th>
+                          <th>Weekly <br> Max</th>
+                          <th>Monthly <br> Max</th>
+                          <th>Daily <br> Max Tx No</th>
+                          <th>Weekly <br> Max Tx No</th>
+                          <th>Monthly <br> Max Tx No</th>
+                          <th>Opetayion <br> Type</th>
+                          <th>Maker <br> Name</th>
+                          <th>Maker <br> Note</th>
+                          <th>Note</th>
+                      
+                      </tr>
+                      </thead>
+                      <tbody>
+                      
+                      
+                     
+                      
+                    </table>
+                    Accepted
+                    <table id="example1" style="font-size: 85%;" class="text-center table table-hover table-sm table-bordered table-striped">
+                      <thead>
+                      <tr style="font-size: 85%;">
+                          
+                          <th>Limit <br> Name</th>
+                          <th>Limit <br> ID</th>
+                          <th>Per <br> Tx Min</th>
+                          <th>Per <br> Tx Max</th>
+                          <th>Daily <br> Max</th>
+                          <th>Weekly <br> Max</th>
+                          <th>Monthly <br> Max</th>
+                          <th>Daily <br> Max Tx No</th>
+                          <th>Weekly <br> Max Tx No</th>
+                          <th>Monthly <br> Max Tx No</th>
+                          <th>Opetayion <br> Type</th>
+                          <th>Maker <br> Name</th>
+                          <th>Maker <br> Note</th>
+                          <th>checker <br> Name</th>
+                          <th>checker <br> Note</th>
+                          
+                      
+                      </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td >IW_Refill from Bank</td>
+                          <td class="">165</td>
+                          <td class="">10</td>
+                          <td class="">50001</td>
+                          <td class="">50001</td>
+                          <td class="">200000</td>
+                          <td class="">200000</td>
+                          <td class="">10</td>
+                          <td class="">100</td>
+                          <td class="">100</td>
+                          <td ><span class="ant-tag-green"> Update </span></td>
+                          <td class="">Islamic Wallet Super Admin</td>
+                          <td class=""></td>
+                          <td class="">Checker</td>
+                          <td class=""></td>
+                        </tr>
+                        <tr>
+                          <td >IW_Refill from Bank</td>
+                          <td class="">165</td>
+                          <td class="">10</td>
+                          <td class="">50001</td>
+                          <td class="">50001</td>
+                          <td class="">200000</td>
+                          <td class="">200000</td>
+                          <td class="">10</td>
+                          <td class="">100</td>
+                          <td class="">100</td>
+                          <td ><span class="ant-tag-blue"> Create </span></td>
+                          <td class="">Islamic Wallet Super Admin</td>
+                          <td class=""></td>
+                          <td class="">Checker</td>
+                          <td class=""></td>
+                        </tr>
+                      </tbody>
+                      
+                      
+                     
+                      
+                    </table>
+
+                    Declined
+                    <table id="example1" style="font-size: 85%;" class="text-center table table-hover table-sm table-bordered table-striped">
+                      <thead>
+                      <tr style="font-size: 85%;">
+                          <th>
+                            <div class="form-group mb-0">
+                              <div class="custom-control custom-checkbox">
+                                <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                <label for="customCheckbox1" class="custom-control-label"></label>
+                              </div>
+                              
+                            </div>
+                          </th>
+                          <th>Limit <br> Name</th>
+                          <th>Limit <br> ID</th>
+                          <th>Per <br> Tx Min</th>
+                          <th>Per <br> Tx Max</th>
+                          <th>Daily <br> Max</th>
+                          <th>Weekly <br> Max</th>
+                          <th>Monthly <br> Max</th>
+                          <th>Daily <br> Max Tx No</th>
+                          <th>Weekly <br> Max Tx No</th>
+                          <th>Monthly <br> Max Tx No</th>
+                          <th>Opetayion <br> Type</th>
+                          <th>Maker <br> Name</th>
+                          <th>Maker <br> Note</th>
+                          <th>Note</th>
                       
                       </tr>
                       </thead>
@@ -950,14 +1130,88 @@
                     </table>
                   </div>
                   <div class="tab-pane fade" id="custom-tabs-four-messages" role="tabpanel" aria-labelledby="custom-tabs-four-messages-tab">
-                     Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris. Phasellus volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget condimentum. Fusce nec hendrerit sem, ac tristique nulla. Integer vestibulum orci odio. Cras nec augue ipsum. Suspendisse ut velit condimentum, mattis urna a, malesuada nunc. Curabitur eleifend facilisis velit finibus tristique. Nam vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum, lectus ipsum gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem eu risus tincidunt eleifend ac ornare magna.
+                    <table id="example1" style="font-size: 85%;" class="text-center table table-hover table-sm table-bordered table-striped">
+                      <thead>
+                      <tr style="font-size: 85%;">
+                          <th>
+                            <div class="form-group mb-0">
+                              <div class="custom-control custom-checkbox">
+                                <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                <label for="customCheckbox1" class="custom-control-label"></label>
+                              </div>
+                              
+                            </div>
+                          </th>
+                          <th>Limit <br> Name</th>
+                          <th>Limit <br> ID</th>
+                          <th>Per <br> Tx Min</th>
+                          <th>Per <br> Tx Max</th>
+                          <th>Daily <br> Max</th>
+                          <th>Weekly <br> Max</th>
+                          <th>Monthly <br> Max</th>
+                          <th>Daily <br> Max Tx No</th>
+                          <th>Weekly <br> Max Tx No</th>
+                          <th>Monthly <br> Max Tx No</th>
+                          <th>Opetayion <br> Type</th>
+                          <th>Maker <br> Name</th>
+                          <th>Maker <br> Note</th>
+                          <th>Note</th>
+                      
+                      </tr>
+                      </thead>
+                      <tbody>
+                      
+                      
+                     
+                      
+                    </tbody></table>
                   </div>
                   <div class="tab-pane fade" id="custom-tabs-four-settings" role="tabpanel" aria-labelledby="custom-tabs-four-settings-tab">
-                     Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis.
+                    <table id="example1" style="font-size: 85%;" class="text-center table table-hover table-sm table-bordered table-striped">
+                      <thead>
+                      <tr style="font-size: 85%;">
+                        <th>
+                          <div class="form-group mb-0">
+                            <div class="custom-control custom-checkbox">
+                              <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                              <label for="customCheckbox1" class="custom-control-label"></label>
+                            </div>
+                            
+                          </div>
+                        </th>
+                         <th>Profile Name</th>
+                         <th>Profile ID</th>
+                         <th>Description</th>
+                         <th>Operation Type</th>
+                         <th>Maker Name</th>
+                         <th>Maker Note</th>
+                         <th>Note</th>
+                      
+                      </tr>
+                      </thead>
+                      <tbody>
+                      
+                      
+                     
+                      
+                    </table>
                   </div>
                 </div>
               </div>
               <!-- /.card -->
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-md-6">
+                    <button type="button" class="btn btn-sm btn-danger btn-block">Decline All</button>
+                  </div>
+                  <div class="col-md-6">
+                    <button type="button" class="btn btn-sm btn-success btn-block">Approve All</button>
+                  </div>
+                </div>
+              
+               
+              </div>
+              <!-- /.card-footer -->
             </div>
           </div>
         </div>

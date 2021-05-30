@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+   <!-- daterange picker -->
+   <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker.css">
   <!-- Select2 -->
   <link rel="stylesheet" href="../../plugins/select2/css/select2.min.css">
   <link rel="stylesheet" href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
@@ -868,80 +870,28 @@
           <!-- /.card-header -->
           <div class="card-body pb-1">
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-12">
                 <div class="form-group">
-                  <label>Select Limit</label>
-                  <select class="form-control form-control-sm select2" style="width: 100%;">
-                    <option selected="selected">Cash In</option>
-                    <option>Bill Pay</option>
-                    <option>Cashout</option>
-                    <option>Fund Movement</option>
-                    <option>Bill Pay</option>
-                    <option>Cashout</option>
-                    <option>Fund Movement</option>
-                    <option>Bill Pay</option>
-                    <option>Cashout</option>
-                    <option>Fund Movement</option>
-                  </select>
+                  <label>Login ID*</label>
+                  <input class="form-control form-control-sm" type="text">
+                   
                 </div>
                 <!-- /.form-group -->
                
               </div>
               <!-- /.col -->
-              <div class="col-md-4">
-                <div class="form-group">
-                  <label>Select Profile</label>
-                  <select class="form-control form-control-sm select2" style="width: 100%;">
-                    <option selected="selected">Default Customer Transaction profile for Bank</option>
-                    <option>Default Customer Transaction profile for Bank</option>
-                    <option>Default Customer Transaction profile for IW</option>
-                    <option>Default Customer Transaction profile for IW</option>
-                    <option>Default Transaction Profile for Super Distributor</option>
-                    <option>Default Transaction Profile for SR</option>
-                    <option>Default Customer Transaction profile for Bank</option>
-                    <option>Default Customer Transaction profile for IW</option>
-                    <option>Default Customer Transaction profile for IW</option>
-                    <option>Default Transaction Profile for Super Distributor</option>
-                    <option>Default Transaction Profile for SR</option>
-                  </select>
-                </div>
-                <!-- /.form-group -->
-               
-              </div>
-              <!-- /.col -->
-             
               
-              <div class="col-md-4">
-                <div class="form-group">
-                  <label>Sales Service</label>
-                  <select class="form-control form-control-sm select2" style="width: 100%;">
-                    <option selected="selected">IC Billpay</option>
-                    <option>IC Mercant Payment</option>
-                    <option>CashBack</option>
-                    <option>Split Money</option>
-                    <option>IC Mercant Payment</option>
-                    <option>CashBack</option>
-                    <option>Split Money</option>
-                  </select>
-                </div>
-                <!-- /.form-group -->
-                
-              </div>
-              <!-- /.col -->
              
             </div>
             <!-- /.row -->
 
           </div>
           <!-- /.card-body -->
-          <div class="card-footer">
-            <button type="button" class="btn btn-sm btn-primary">Submit</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Reset</button>
-          </div>
+          
         </div>
         <!-- /.card -->
 
-        <!-- SELECT2 EXAMPLE -->
+      
 
             <div class="card">
                 <!-- <div class="card-header">
@@ -949,30 +899,573 @@
                 </div> -->
                 <!-- /.card-header -->
                 <div class="card-body">
-                  <table id="example1" class="table table-hover table-sm table-bordered table-striped">
-                    <thead>
-                    <tr>
-                        <th class="w-25">Service name</th>
-                        <th>Limit name</th>
-                        <th>Profile name</th>
-                        <th class="text-center">Action</th>
-                    
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                      <td>Cash In</td>
-                      <td>Super Distributor</td>
-                      <td>Default Transaction profile for Independent Agent</td>
-                      <td class="text-center">
-                        <button type="button" class="btn btn-sm btn-success">Edit</button>
-                        <button type="button" class="btn btn-sm btn-danger">Delete</button>
-                      </td>
-                    </tr>
-                    
+
+
+
+
+                  <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="custom-tabs-four-home-tab" data-toggle="pill" href="#custom-tabs-four-home" role="tab" aria-controls="custom-tabs-four-home" aria-selected="true">Customer Profile</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="custom-tabs-four-profile-tab" data-toggle="pill" href="#custom-tabs-four-profile" role="tab" aria-controls="custom-tabs-four-profile" aria-selected="false">Statement</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="custom-tabs-four-messages-tab" data-toggle="pill" href="#custom-tabs-four-messages" role="tab" aria-controls="custom-tabs-four-messages" aria-selected="false">Transaction Limit</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                      <a class="nav-link" id="custom-tabs-four-settings-tab" data-toggle="pill" href="#custom-tabs-four-settings" role="tab" aria-controls="custom-tabs-four-settings" aria-selected="false">Assign Client to Profile</a>
+                    </li> -->
+                  </ul>
+
+                  <div class="tab-content" id="custom-tabs-four-tabContent ">
+                    <div class="tab-pane fade show active pt-2" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
+
+
+                      <div class="card card-default">
+                        <!-- /.card-header -->
+                        <div class="card-body p-1">
+                           <div class="row">
+                              <div class="col-md-12">
+                                <div class="grid-container-customProfile">
+                                  <div class="grid-item">
+                                    <table class="table table-sm  table-borderless w-100">
+                                      <tr>
+                                        <th class="w-47">Customer Name :</th>
+                                        <td>
+                                          Md. Afzalur Rashid</td>
+                                      </tr>
+                                      <tr>
+                                        <th>Wallet Type :</th>
+                                        <td>
+                                          Customer</td>
+                                      </tr>
+                                      <tr>
+                                        <th>Operator :</th>
+                                        <td>
+                                          
+Not found</td>
+                                      </tr>
+                                      <tr>
+                                        <th>Date of Birth :</th>
+                                        <td>
+                                          
+01/08/1980</td>
+                                      </tr>
+                                      <tr>
+                                        <th>Customer App Version :</th>
+                                        <td>
+                                          ----</td>
+                                      </tr>
+                                      <tr>
+                                        <th>Suspension Status :</th>
+                                        <td>
+                                          <span class="ant-tag-green">
+                                            Not Suspended
+                                          </span></td>
+                                      </tr>
+                                      <tr>
+                                        <th>Verification Date :</th>
+                                        <td>
+                                          
+4/22/2021</td>
+                                      </tr>
+                                    </table>
+                                  
+                                  
+                                  </div>
+                                  <div class="grid-item">
+                                   
+                                    <table class="table table-sm  table-borderless w-100">
+                                      <tr>
+                                         <th>
+                                          Wallet ID :</th>
+                                         <td>
+                                            
+01614099336
+                                         </td>
+                                      </tr>
+                                      <tr>
+                                         <th>
+                                          Email :</th>
+                                         <td>
+                                            
+afzalur.rashid@gmail.com
+                                         </td>
+                                      </tr>
+                                      <tr>
+                                         <th>
+                                          Gender :</th>
+                                         <td>
+                                            
+M
+                                         </td>
+                                      </tr>
+                                      <tr>
+                                         <th>
+                                          National ID :</th>
+                                         <td>
+                                            
+2696405624445
+                                         </td>
+                                      </tr>
+                                      <tr> 
+                                         <th>
+                                          Wallet Status :</th>
+                                         <td>
+                                          <span class="ant-tag-blue">
+                                            Active
+                                            </span>
+                                         </td>
+                                      </tr>
+                                      <tr>
+                                         <th>Current Balance :</th>
+                                         <td>
+                                          
+12513.61
+                                         </td>
+                                      </tr>
+                                      
+                                   </table>
+
+
+                                  </div>
+                                 
+                                  <div class="grid-item">
+
+                                    <img src="../img/user.jpg" class="img-thumbnail" alt="">
+                                  </div>
+                                 
+                                </div>
+                              </div>
+                              <!-- /.col -->
+                           </div>
+                           <!-- /.row -->
+                        </div>
+                        <!-- /.card-body -->
+                     </div>
+                     <!-- /.card -->
+
+                     <div class="card card-primary">
+                       <div class="card-header">
+                          <h3 class="card-title">Personal Information</h3>
+                        </div>
+                        <!-- /.card-header -->
+                      <div class="card-body p-1">
+                         <div class="row">
+                            <div class="col-md-12">
+                              <div class="grid-container-customProfile">
+                                <div class="grid-item">
+                                  <table class="table table-sm  table-borderless w-100">
+                                    <tr>
+                                      <th class="w-47">Father Name :</th>
+                                      <td>
+                                        ---</td>
+                                    </tr>
+                                    <tr>
+                                      <th>Device Name :</th>
+                                      <td>
+                                        Customer</td>
+                                    </tr>
+                                    <tr>
+                                      <th>Permanent Address :</th>
+                                      <td>
+                                        
+                                      ---</td>
+                                    </tr>
+                                    <tr>
+                                      <th>Occupation :</th>
+                                      <td>
+                                        
+                                        ---</td>
+                                    </tr>
+                                    <tr>
+                                      <th>Customer App Version :</th>
+                                      <td>
+                                        ----</td>
+                                    </tr>
+                                    <tr>
+                                      <th>Transaction Purpose :</th>
+                                      <td>
+                                        ---</td>
+                                    </tr>
+                                    <tr>
+                                      <th>NID Status :</th>
+                                      <td>
+                                        
+                                      ---</td>
+                                    </tr>
+
+                                    <tr>
+                                      <th>Email Status</th>
+                                      <td>---</td>
+                                    </tr>
+                                    <tr>
+                                      <th>Registration Date :</th>
+                                      <td>---</td>
+                                    </tr>
+                                    
+                                  </table>
+                                
+                                
+                                </div>
+                                <div class="grid-item">
+                                  <table class="table table-sm  table-borderless w-100">
+                                    <tr>
+                                       <th>Mother Name : </th>
+                                       <td>
+                                          ---
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>
+                                          Authorized Person Name:
+                                       </th>
+                                       <td>
+                                         ----
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>
+                                          Present Address :
+                                       </th>
+                                       <td>
+                                          ----
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>
+                                          Source of Income :
+                                       </th>
+                                       <td>
+                                          ----
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>
+                                          Profile Picture Status 
+                                       </th>
+                                       <td>
+                                         -----
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>
+                                          Bank Information Status :
+                                       </th>
+                                       <td>
+                                          12513.61
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <th>
+                                          No of Devices :
+                                       </th>
+                                       <td>
+                                          ---
+                                       </td>
+                                    </tr>
+                                 </table>
+
+
+                                </div>
+                               
+                                <div class="grid-item">
+
+                                 
+                                </div>
+                               
+                              </div>
+                            </div>
+                            <!-- /.col -->
+                         </div>
+                         <!-- /.row -->
+                      </div>
+                      <!-- /.card-body -->
+
+                   </div>
                    
-                    </tfoot>
-                  </table>
+
+
+                   <div class="card card-primary">
+                    <div class="card-header">
+                      Bank Information
+                    </div>
+                    <div class="card-body">
+
+                     <label class="mb-0"> No of Banks : <font class="font-weight-normal">2</font> </label> <br>
+                      <label>No of Beneficiaries :  <font class="font-weight-normal">2</font> </label>
+                      <table id="example1" class="table table-hover table-sm table-bordered table-striped fsize90">
+                        <thead>
+                        <tr>
+                           <th>Bank name</th>
+                           <th>Type </th>
+                           <th>District name </th>
+                           <th>Branch Name</th>
+                           <th>	
+                            Bank A/C Name</th>
+                           <th>	
+                            Bank A/C Number</th>
+                           <th>	
+                            A/c Addition Date</th>
+                           <th>A/c Removal Date</th>
+                           <th>Status</th>
+                           
+                        
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td class="text-center">
+                            <span class="ant-tag-green">Verified</span>
+                            <!-- <span class="ant-tag-red">Removed</span> -->
+                          </td>
+                        </tr>
+                        
+                       
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="card card-primary">
+                    <div class="card-header">
+                      Transactional Information
+
+                    </div>
+                    <div class="card-body">
+                      <table id="example1" class="table table-hover table-sm table-bordered table-striped fsize90">
+                        <thead>
+                        <tr>
+                          <th>Txn Ref ID</th>
+                          <th >Txn Date</th>
+                          <th >Txn Time</th>
+                          <th >Payer</th>
+                          <th >Payer Mobile/AC No.</th>
+                          <th >Payee Name</th>
+                          <th >Payee Mobile/AC No.</th>
+                          <th >Cluster</th>
+                          <th >Transaction Type</th>
+                          <th >Credit</th>
+                          <th >Debit</th>
+                          <th >Fee</th>
+                          <th >Particulars</th></tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td >B06C02A4033B</td>
+                            <td >5/11/2021 </td>
+                            <td >3:09:42 PM </td>
+                            <td >Md. Afzalur Rashid</td>
+                            <td >01614099336</td>
+                            <td >LankaBangla Credit Card</td><td >01713851194</td><td >DM</td><td >Bill Pay</td><td >Tk 0  </td>
+                            <td >Tk 12000  </td>
+                            <td >Tk 0  </td>
+                            <td >IcBillPay. Bank name :AL-ARAFAH ISLAMI BANK LTD. Bank account number :99212******15 TRACKING NO. 01614099336-1UKCQFUHFFQSEUMT. Dmoney Transaction Reference : B0737952B86C Channel : IOS_APP &amp; App Version : 2.4.1</td>
+                          </tr>
+                        
+                       
+                        </tfoot>
+                      </table>
+                    </div>
+
+
+                    <div class="card card-default">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-4">
+                            <button class="btn btn-success btn-block">Lock</button>
+                          </div>
+                          <div class="col-4">
+                            <button class="btn btn-outline-dark btn-block">Email Verification</button>
+                          </div>
+                          <div class="col-4">
+                            <button class="btn btn-danger btn-block">Pin Request</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+  
+                      
+                    </div>
+                    <div class="tab-pane fade" id="custom-tabs-four-profile" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
+                      <label>Date range:</label>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div>
+                         
+                          <!-- Date range -->
+                   <div class="form-group">
+                  
+   
+                     <div class="input-group">
+                       <div class="input-group-prepend">
+                         <span class="input-group-text">
+                           <i class="far fa-calendar-alt"></i>
+                         </span>
+                       </div>
+                       <input type="text" class="form-control float-right" id="reservation">
+                     </div>
+                     <!-- /.input group -->
+                   </div>
+                   <!-- /.form group -->
+                         </div>
+                      </div>
+                      <div class="col-md-6 text-right">
+                        <button class="btn btn-primary"><i class="fas fa-download mr-1"></i> Download report</button>
+                      </div>
+                    </div>
+
+                    
+                      <div class="card card-secondary">
+                        <div class="card-header">
+                          <div class="d-flex justify-content-between">
+                            <div>
+                              Transactional Information
+                            </div>
+                            <div>
+                              <div class="input-group input-group-sm">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-body">
+    
+                      
+
+
+                          <table id="example1" class="table table-hover table-sm table-bordered table-striped fsize90">
+                        <thead>
+                        <tr>
+                          <th>Txn Ref ID</th>
+                          <th >Txn Date</th>
+                          <th >Txn Time</th>
+                          <th >Payer</th>
+                          <th >Payer Mobile/AC No.</th>
+                          <th >Payee Name</th>
+                          <th >Payee Mobile/AC No.</th>
+                          <th >Cluster</th>
+                          <th >Transaction Type</th>
+                          <th >Credit</th>
+                          <th >Debit</th>
+                          <th >Fee</th>
+                          <th >Particulars</th></tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td >B06C02A4033B</td>
+                            <td >5/11/2021 </td>
+                            <td >3:09:42 PM </td>
+                            <td >Md. Afzalur Rashid</td>
+                            <td >01614099336</td>
+                            <td >LankaBangla Credit Card</td><td >01713851194</td><td >DM</td><td >Bill Pay</td><td >Tk 0  </td>
+                            <td >Tk 12000  </td>
+                            <td >Tk 0  </td>
+                            <td >IcBillPay. Bank name :AL-ARAFAH ISLAMI BANK LTD. Bank account number :99212******15 TRACKING NO. 01614099336-1UKCQFUHFFQSEUMT. Dmoney Transaction Reference : B0737952B86C Channel : IOS_APP &amp; App Version : 2.4.1</td>
+                          </tr>
+                        
+                       
+                        </tfoot>
+                      </table>
+                        </div>
+                      </div>
+
+
+
+
+
+
+
+
+                  
+                    </div>
+                    <div class="tab-pane fade" id="custom-tabs-four-messages" role="tabpanel" aria-labelledby="custom-tabs-four-messages-tab">
+                      <table id="example1" style="font-size: 85%;" class="text-center table table-hover table-sm table-bordered table-striped">
+                        <thead>
+                        <tr style="font-size: 85%;">
+                            <th>
+                              <div class="form-group mb-0">
+                                <div class="custom-control custom-checkbox">
+                                  <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                  <label for="customCheckbox1" class="custom-control-label"></label>
+                                </div>
+                                
+                              </div>
+                            </th>
+                            <th>Limit <br> Name</th>
+                            <th>Limit <br> ID</th>
+                            <th>Per <br> Tx Min</th>
+                            <th>Per <br> Tx Max</th>
+                            <th>Daily <br> Max</th>
+                            <th>Weekly <br> Max</th>
+                            <th>Monthly <br> Max</th>
+                            <th>Daily <br> Max Tx No</th>
+                            <th>Weekly <br> Max Tx No</th>
+                            <th>Monthly <br> Max Tx No</th>
+                            <th>Opetayion <br> Type</th>
+                            <th>Maker <br> Name</th>
+                            <th>Maker <br> Note</th>
+                            <th>Note</th>
+                        
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+                        
+                       
+                        
+                      </tbody></table>
+                    </div>
+                    <!-- <div class="tab-pane fade" id="custom-tabs-four-settings" role="tabpanel" aria-labelledby="custom-tabs-four-settings-tab">
+                      <table id="example1" style="font-size: 85%;" class="text-center table table-hover table-sm table-bordered table-striped">
+                        <thead>
+                        <tr style="font-size: 85%;">
+                          <th>
+                            <div class="form-group mb-0">
+                              <div class="custom-control custom-checkbox">
+                                <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                <label for="customCheckbox1" class="custom-control-label"></label>
+                              </div>
+                              
+                            </div>
+                          </th>
+                           <th>Profile Name</th>
+                           <th>Profile ID</th>
+                           <th>Description</th>
+                           <th>Operation Type</th>
+                           <th>Maker Name</th>
+                           <th>Maker Note</th>
+                           <th>Note</th>
+                        
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+                        
+                       
+                        
+                      </table>
+                    </div> -->
+                  </div>
+        
+
+                 
                 </div>
                 <!-- /.card-body -->
               </div>
@@ -1032,6 +1525,33 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
 <!-- Page specific script -->
+<!-- date-range-picker -->
+<script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+
+
+
+
+
+
+
+
+
+<!-- InputMask -->
+<script src="../../plugins/moment/moment.min.js"></script>
+<script src="../../plugins/inputmask/jquery.inputmask.min.js"></script>
+<!-- date-range-picker -->
+<script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="../../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+
+
+
+
+
+
+
+
+
 <script>
 $(function () {
   bsCustomFileInput.init();

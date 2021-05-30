@@ -10,9 +10,19 @@
   }
 
   .ant-tag-green {
-    color: #17ca20!important;
-    background: #f6ffed!important;
-    border: 1px solid #b7eb8f;
+    color: #00b309!important;
+    background: #e8fbd4!important;
+    border: 1px solid #a1dd73;
+    padding: .25em .40em!important;
+    margin-top: .25em;
+    border-radius: 4px;
+    font-size: .875em;
+  }
+
+  .ant-tag-red {
+    color: #dd1f06!important;
+    background: #ffeded!important;
+    border: 1px solid #eb9a8f;
     padding: .25em .40em!important;
     margin-top: .25em;
     border-radius: 4px;
@@ -35,6 +45,21 @@
   /* .fa-circle{
     color: transparent!important;
   } */
+
+.fsize90{
+  font-size: 90%;
+}
+
+.grid-container-customProfile{
+  display: grid;
+  grid-template-columns: 40% 40% 20% ;
+  /* background-color: #d2ebff; */
+  padding: 10px;
+}
+
+
+
+
 
 
 

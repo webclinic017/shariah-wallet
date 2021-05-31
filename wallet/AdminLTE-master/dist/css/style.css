@@ -34,6 +34,11 @@
     vertical-align: inherit;
 }
 
+.table thead tr th {
+  display: table-cell;
+  vertical-align: inherit;
+}
+
 
 .nav-link p{
   font-size: .9rem!important;
